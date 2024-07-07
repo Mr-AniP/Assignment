@@ -1,0 +1,16 @@
+read_verilog fsm.v
+hierarchy -check -top vdf_2_fsm
+synth
+stat
+
+dfflibmap -liberty NangateOpenCellLibrary_low_temp.lib
+abc -liberty NangateOpenCellLibrary_low_temp.lib
+opt_clean
+stat -liberty NangateOpenCellLibrary_low_temp.lib
+
+# write files
+write_verilog synth_fsm.v
+write_spice synth_fsm.sp
+
+#show
+#show -format ps fsm vdf_2_fsm > schematic_fsm.ps

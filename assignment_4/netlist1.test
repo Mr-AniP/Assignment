@@ -1,0 +1,38 @@
+* Name of circuit:  netlist1.v.bench
+* Primary inputs :
+  A B C D 
+  
+* Primary outputs:
+  Z 
+
+* Test patterns and fault free responses:
+C /1
+      1: 1x00 0
+C /0
+      1: 1x10 1
+w1 /1
+      1: 0010 0
+C->w2 /1
+      1: 1x0x 0
+      2: 010x 0
+w3 /0
+      1: xx0x 0
+      2: 0010 0
+D /1
+      1: 1x10 1
+C->w4 /1
+Z /0
+      1: 1x10 1
+      2: 0110 1
+A /0
+      1: 1010 1
+B /0
+      1: 0110 1
+w4 /0
+      1: 1x11 0
+      2: 0111 0
+Z /1
+      1: xx11 0
+      2: xx01 0
+      3: xx00 0
+      4: 0010 0

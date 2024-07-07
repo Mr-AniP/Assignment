@@ -1,0 +1,11 @@
+create_clock -name CLOCK -period 0.2 [get_ports CLK]
+set_clock_transition 0.03 [get_clocks CLOCK]
+set_clock_uncertainty 0.05 [get_clocks CLOCK]
+set_input_delay -max 0.07 -clock CLOCK [get_ports A]
+set_input_delay -max 0.07 -clock CLOCK [get_ports B]
+set_input_delay -max 0.07 -clock CLOCK [get_ports C]
+set_input_delay -max 0.07 -clock CLOCK [get_ports D]
+set_input_delay -max 0.07 -clock CLOCK [get_ports E]
+set_output_delay -max 0.15 -clock CLOCK [get_ports OUT]
+set_load 0.6 [get_ports OUT]
+

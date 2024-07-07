@@ -1,0 +1,12 @@
+#bench format
+INPUT(A)
+INPUT(B)
+INPUT(C)
+INPUT(D)
+w1=OR(A,B)
+w2=AND(w1,C)
+w3=NOT(w2)
+w4=AND(C,D)
+w5=OR(w3,w4)
+Z=NOT(w5)
+OUTPUT(Z)

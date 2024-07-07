@@ -1,0 +1,29 @@
+Startpoint: F1 (rising edge-triggered flip-flop clocked by CLOCK)
+Endpoint: F2 (rising edge-triggered flip-flop clocked by CLOCK)
+Path Group: CLOCK
+Path Type: min
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock CLOCK (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ F1/CK (SDFF_X1)
+   0.03    0.03 v F1/Q (SDFF_X1)
+   0.01    0.05 v A1/ZN (AND2_X1)
+   0.00    0.05 v F2/D (SDFF_X1)
+           0.05   data arrival time
+
+   0.00    0.00   clock CLOCK (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.05    0.05   clock uncertainty
+   0.00    0.05   clock reconvergence pessimism
+           0.05 ^ F2/CK (SDFF_X1)
+   0.00    0.05   library hold time
+           0.05   data required time
+---------------------------------------------------------
+           0.05   data required time
+          -0.05   data arrival time
+---------------------------------------------------------
+           0.00   slack (MET)
+
+

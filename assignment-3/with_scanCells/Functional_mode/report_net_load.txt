@@ -1,0 +1,17 @@
+Warning: sta_script.tcl line 7, report_net -connections is deprecated.
+Warning: sta_script.tcl line 7, report_net -verbose is deprecated.
+Net _001_
+ Pin capacitance: 1.85-1.90
+ Wire capacitance: 0.00
+ Total capacitance: 1.85-1.90
+ Number of drivers: 1
+ Number of loads: 2
+ Number of pins: 3
+
+Driver pins
+ F1/Q output (SDFF_X1)
+
+Load pins
+ A1/A2 input (AND2_X1) 0.94-0.98
+ F2/SI input (SDFF_X1) 0.91-0.92
+
